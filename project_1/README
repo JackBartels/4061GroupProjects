@@ -1,0 +1,22 @@
+/* CSci4061 S2018 Assignment 1
+* login: cselabs login name (login used to submit)
+* date: 10/05/18
+* name: Lee Wintervold, Jack Bartels, Joe Keene
+* id: Winte413, Barte285, Keen0129 
+
+Lee- I worked on the warmup, build function, and debugged a few issues in the depend_are_newer and the command line input handler. 
+Joe - I worked on checking timestamps, file existance, and a few bugs in the warmup.
+Jack - I worked on specified targets, -f flag implementation, and some error handling.
+
+void build(target_t* basetarget, target_t* target, int nTargetCount): Function that recursively calls build on each dependancy in
+the DAG of the target that is passed. It calls the function does_file_exist to check if file exist. If the file does not exist it 
+continue to build. It calls the function depend_are_newer to check timestamps. If dependencies are newer than it will continue to build.
+To build the function creates a new process using fork(). Within the child process, it calls parse_into_tokens to tokenize the input
+string. it then uses execvp() to execute the command of the target that was tokenized. 
+
+int depend_are_newer(target_t *target): Function to check the target's modification timestamp with the target's dependencies timestamps.
+If any of the dependencies have been modified more recent than the target, return 1 to proceed with build function.
+If the target is more recent than all dependencies, target is up to date, no need to recompile, return 0. 
+
+
+*/
