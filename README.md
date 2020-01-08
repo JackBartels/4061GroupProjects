@@ -1,6 +1,6 @@
 ## Summary of Contributions
 
-This repository is a collection of projects completed by myself, Lee Wintervold, and Joe Keene for an Operating Systems course.
+This repository is a collection of projects completed by myself, Lee Wintervold, and Joe Keene for an Operating Systems course. All projects were written in the C programming language. Some code and content are instructor provided.
 
 My contributions and where to view them can be viewed concisely below:
 
